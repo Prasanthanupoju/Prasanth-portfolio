@@ -4,121 +4,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP-Collections</title>
+    <title>Prasanth-portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- -------------font awsome link------------- -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playwrite+AU+VIC+Guides&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" href="sp-logo_meta.png" type="image/png" sizes="10x10">
-
+    <script src="https://kit.fontawesome.com/a76c795909.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="Bhavani.png" type="image/png" sizes="10x10">
 </head>
 
 <body>
-    <div class="Navbar">
-        <div class="logo-img">
-            <img src="sp-logo.png" alt="">
-        </div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="index.html">New Arrivals</a>
-            <a href="shirts.html">Men</a>
-            <a href="saress.html">Women</a>
-            <a href="contact me/contact.html">Contact</a>
-            
-            <a href="cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <i id="closebars" onclick="closemenu()" class="fa-solid fa-circle-xmark"></i>
-        </div>
-    </div>
-    <div class="opendiv">
-        <i id="openbars" onclick="openmenu()" class="fa-solid fa-bars"></i>
-        <p>SP-Collections.</p>
-    </div>
 
-    <!-- ----------------slideshow Banner--------------- -->
-
-    <div class="image-main-div">
-        <div class="image-slideshow">
-            <img src="men-banner-min.png" alt="">
-            <img src="women-banner-min.png" alt="">
+    <!-- main content that presenth nav,image,content,quote and aboutem links  -->
+    <div class="main-first-hero-content">
+        <header class="header" id="header">
+            <!-- name of prasanth represented as logo  -->
+            <a href="#" class="header-logo">Prasanth.</a>
+            <!-- nav bar that contain navlinks  -->
+            <nav class="navbar" id="navbar">
+                <a href="#navbar">Home</a>
+                <a href="#part2">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#skills">Skills</a>
+                <a href="#row">Contact</a>
+                <a href="prasanth RESUME_MAIN.pdf" download class="resume-button">Downlord Resume</a>
+                <i class="fa-solid fa-square-xmark" id="intumark" onclick="closemenu()"></i>
+            </nav>
+        </header>
+        <div class="new-prasanth-logoand-bar">
+            <h1>
+                Prasanth.
+            </h1>
+            <i class="fa-solid fa-bars" id="bars" onclick="openmenu()"></i>
         </div>
-    </div>
 
-    <div class="products-continer">
-        <div class="products">
-            <a href="shirts.html">
-                <div class="shirt">
-                    <img src="shirts/shirt-4.webp" alt="">
-                    <p>Shirts</p>
+        <!-- header and nav closed here -->
+        <!-- this is content that present dow of nav  -->
+        <div class="main-right-block">
+            <img class="main-img" src="IMG_9424.JPG" alt="">
+            <div class="main-left-block">
+                <p class="hero-intro"> Hello I'm <br><span>Prasanth Anupoju</span><br> Frontend Developer </p>
+                <p class="hero-content">I'm a passionate front-end web developer with expertise in HTML, CSS, and
+                    JavaScript. I
+                    specialize in creating
+                    user-friendly and visually appealing web products that deliver exceptional user experiences.</p>
+                <div class="intro-content-down-links">
+                    <a class="get-a-quote" href="#row">Get a Quote</a>
+                    <a class="about-me" href="#part2">About Me </a>
                 </div>
-            </a>
-            <a href="pants.html">
-                <div class="shirt">
-                    <img src="pants/pant-12.jpg" alt="">
-                    <p>Pants</p>
-                </div>
-            </a>
-            <a href="kurthi.html">
-                <div class="shirt">
-                    <img src="kurtis.jpg" alt="">
-                    <p>Kurtis</p>
-                </div>
-            </a>
-            <a href="saress.html">
-                <div class="shirt">
-                    <img src="sarees.jpg" alt="">
-                    <p>Sarees</p>
-                </div>
-            </a>
+            </div>
 
         </div>
-    </div>
-    <div class="connect-continer">
-        <div class="connect">
-            <div class="form">
-                <p>Get Connect With Us</p>
-                <form action="">
-                    <input type="email" name="Email" placeholder="Email" required>
+        <!-- end of the hero content -->
+        <div class="part2" id="part2">
+            <div class="part2-aboutme">
+                <img class="aboutme-img-3d" src="about-me-img.avif" alt="">
+            </div>
+            <div class="aboutme-content">
+
+                <p class="welcome-3">Welcome to the digital portfolio of a Frontend Developer</p>
+                <p class="matter-4">I'm a passionate front-end developer with a strong foundation in HTML, CSS, and
+                    JavaScript.
+                    Over time, I've
+                    honed my skills in creating responsive, user-friendly web applications, focusing on delivering
+                    seamless user
+                    experiences. I enjoy solving design and coding challenges, constantly learning new technologies, and
+                    applying
+                    them to real-world problems.
+                </p>
+                <p class="matter-4">Beyond coding, I'm a collaborative team player who values clear communication and
+                    creativity
+                    in projects. I'm
+                    excited about opportunities where I can contribute to building innovative products while growing
+                    both personally
+                    and professionally.</p>
+            </div>
+        </div>
+
+        <!-- -----------portfolio----------- -->
+        <div id="portfolio">
+            <div class="continer">
+                <h1 class="sub-title">Projects</h1>
+                <div class="portfolio-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Netflex Clone</h2>
+                        <P>This is complete Netflex clone app that i have build using HTML And css</P>
+                        <a href="https://github.com/Prasanthanupoju/netflex-clone">Git Link</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Rock Paper Scissors</h2>
+                        <P>This is Game of Rock-paper-scissors, i have developed this using HTML,CSS And JS</P>
+                        <a href="https://github.com/Prasanthanupoju/Mini-Project-2-RPS-">Git Link</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>SOS Game</h2>
+                        <P>This SOS Game, I have developed using HTML,CSS And JA </P>
+                        <a href="https://github.com/Prasanthanupoju/MiniProject1-SOSgame">Git Link</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>SP Collections</h2>
+                        <P>This is ecommerse clothing webpage, developed using html css and js</P>
+                        <a href="https://sp-collections.netlify.app/">Go to webpage</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>ECT CLOUD VAULT</h2>
+                        <P>This page is for students to access their pdfs by their department! </P>
+                        <a href="https://github.com/Prasanthanupoju/ECT-CloudVault/tree/main/ECT-CloudVault">Git Link
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------------------skills-------------------------------- -->
+
+        <div class="part3" id="skills">
+            <div class="skillpara">
+                <p><span class="myskills">My Skills</span><br>
+                    I Develop Skills Regularly <br>
+                    Developer's Name exemplifies dedication to his craft by actively seeking out new learning
+                    opportunities,
+                    embodying
+                    the spirit of continuous improvement.Here are some of the programming languages, frameworks, And
+                    Skills
+                    That I've
+                    learnt.</p>
+            </div>
+
+            <div class="skillcontiner">
+                <div class="skillbox">
+                    <span class="title">HTML</span>
+                    <div class="skillbar">
+                        <span class="skill-per html">
+                            <span class="tooltip">
+                                90%
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skillbox">
+                    <span class="title">CSS</span>
+                    <div class="skillbar">
+                        <span class="skill-per css">
+                            <span class="tooltip">
+                                70%
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skillbox">
+                    <span class="title">JS</span>
+                    <div class="skillbar">
+                        <span class="skill-per js">
+                            <span class="tooltip">
+                                50%
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skillbox">
+                    <span class="title">REACT JS</span>
+                    <div class="skillbar ">
+                        <span class="skill-per react-js">
+                            <span class="tooltip">
+                                40%
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skillbox">
+                    <span class="title">PHP</span>
+                    <div class="skillbar ">
+                        <span class="skill-per php">
+                            <span class="tooltip">
+                                40%
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skillbox">
+                    <span class="title">PYTHON</span>
+                    <div class="skillbar ">
+                        <span class="skill-per python">
+                            <span class="tooltip">
+                                80%
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ---------------------contact------------------- -->
+
+
+        <div id="row" class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p id="mail"><i class="fa-solid fa-paper-plane"></i> prasanth.anupoju@sasi.ac.in</p>
+                <p><i class="fa-solid fa-phone"></i> 9849392214</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/reel/Cr3h19YAGOC/?igsh=ZGw1NG80cG5yZW9i"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Prasanthanupoju?tab=repositories"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="www.linkedin.com/in/bhavani-prasanth-anupoju-18777a280"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="prasanth RESUME_MAIN.pdf" download id="downlord-resume-btn" class="btn">Downlord Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+
                 </form>
-                <button> <i class="fa-regular fa-envelope"></i></button>
+                <button class="btn" id="submit-btn" type="submit">Submit</button>
+                <span id="msg"></span>
             </div>
         </div>
-    </div>
-    <!-- -----------footer----------- -->
-    <footer>
-        <div class="footer-continer">
-            <div class="footer">
-                <ul>
-                    <div>
-                        <li> Mens Shirts</li>
-                        <li> Mens Pants</li>
-                        <li> lenin shirst</li>
-                    </div>
-                    <div>
-                        <li> Cargo pants</li>
-                        <li> Women kurthis</li>
-                        <li> Women Sarees</li>
-                    </div>
-                    <div>
-                        <li> New arrivels</li>
-                    </div>
-                </ul>
-                <div class="symbols">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-
-            </div>
+        <footer>
+            <div class="copyright">
+            <p>copyright &copy; Made by Prasanth Anupoju<i class="fa-solid fa-heart"></i></p>
         </div>
+        </footer>
 
-    </footer>
-    <div class="copyright">
-        <p>&copy; Designed by prasanth made with &#x2665; Love</p>
+        <script src="portfolio.js"></script>
     </div>
-
-
-    <script src="app.js"></script>
 </body>
 
 </html>
