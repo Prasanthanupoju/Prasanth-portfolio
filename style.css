@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
   color: rgb(250, 250, 250);
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -19,12 +19,8 @@ body {
 
 .main-first-hero-content {
   background-color: rgb(57, 57, 78);
-  background-image: url('ps-background-image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  height: 100vh;
-  width: 100%;
+  height: auto;
+  margin-top: 100px;
 }
 
 /* this is all about background image*/
@@ -36,185 +32,229 @@ html {
   position: fixed;
   top: 0px;
   left: 0px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  display: flex;
   width: 100%;
   z-index: 100;
-  padding: 20px 10px;
+  padding: 10px 10%;
   background-color: rgb(57, 57, 78);
+}
+
+#intumark,
+.new-prasanth-logoand-bar {
+  display: none;
 }
 
 .header-logo {
   text-decoration: none;
-  display: flex;
-  position: relative;
-  font-weight: 600;
   font-size: 23px;
   font-family: "Poppins", serif;
   margin-left: 120px;
-
 }
 
 .navbar a {
   text-decoration: none;
   font-family: 'popins', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   padding-left: 15px;
   padding-right: 15px;
   font-weight: 600;
 }
 
+.resume-button::before {
+  display: none;
+  /* Removes the underline effect */
+}
 
 .navbar a::before {
   content: '';
   position: absolute;
-  top: 43px;
+  top: 34px;
   left: 0x;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: rgba(255, 253, 253, 0.815);
   transition: .3s;
 }
 
 .navbar a:hover::before {
-  width: 50px;
+  width: 45px;
+  border-radius: 20px;
 }
 
-.main-img {
-  width: 25%;
-  display: flex;
-  margin: 100px;
-  margin-left: 60%;
-  margin-top: 10%;
-  border-radius: 12%;
-  box-shadow: 3px 2px 13px 2px black;
-  object-fit: cover;
-
-}
-
-.main-right-block {
-  height: 100vh;
-}
-
-.main-list-block {
-  width: 35vw;
-  position: relative;
-  bottom: 350px;
-  left: 127px;
-
-}
-
-.hero-intro {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.main-list-block span {
-  font-size: 30px;
-  color: rgb(249, 129, 16);
-  position: relative;
-
-}
-
-.hero-content {
-  font-family: "Poppins", serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 14px;
-  padding-top: 14px;
-}
-
-/* buttons of get a quote and about me */
-
-.intro-content-down-links {
-  position: relative;
-  top: -325px;
-  left: 125px;
-  width: 30vw;
-  height: 10vh;
-
-}
-
-.intro-content-down-links a {
-  text-decoration: none;
-  font-family: "Bebas Neue", serif;
-  font-weight: 400;
-}
-
-.get-a-quote {
-  margin-right: 3rem;
-  background-color: rgb(236, 125, 22);
-  border-radius: -13%;
-  padding: 6px 22px 5px 21px;
-}
-
-.header .fa-solid {
-  display: none;
-}
-
-.new-prasanth-logoand-bar {
-  display: none;
+.resume-button:hover {
+  background-color: green;
+  /* Color on hover */
 }
 
 .resume-button {
   background: rgb(249, 129, 16);
   padding: 11px 11px 12px 0px;
   border-radius: 20px;
-
 }
 
-/* ----------part2---------- */
-.aboutme-img-3d {
-  width: 300px;
-  margin-left: 45px;
-  border-radius: 5%;
-  box-shadow: 0px 0px 15px 1px black;
-}
 
-.part2 {
+.main-right-block {
+  font-family: 'popins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 150px;
+  margin: auto;
+  padding: 110px;
+  padding-left: 220px;
+}
+
+.main-left-block {
+  margin-left: 90px;
+  /* border: 2px solid yellow; */
+  flex: 1;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.main-img {
+  flex: 1;
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+
+
+
+.hero-intro {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-intro span {
+  color: #ff6600;
+  font-size: 2.5rem;
+}
+
+.hero-content {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.intro-content-down-links {
+  margin-top: 20px;
+  /* border: 2px solid red; */
+}
+
+.intro-content-down-links a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.get-a-quote {
+  background-color: #ff6600;
+  color: white;
+}
+
+.get-a-quote:hover {
+  background-color: #e55a00;
+}
+
+.about-me {
+  background-color: transparent;
+  color: #ff6600;
+  border: 2px solid #ff6600;
+}
+
+.about-me:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+/* Animation Effects */
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------------about me--------------- */
+
+
+.part2 {
+  font-family: "Poppins", serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+}
+
+.part2-aboutme {
+  flex: 1;
+  max-width: 40%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.aboutme-img-3d {
+  margin-top: 30px;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .aboutme-content {
-  padding-left: 15px;
-}
-
-.iam-frontend-1 {
-  font-family: "Poppins", serif;
-}
-
-.i-design-2 {
-  font-family: "Poppins", serif;
-  font-weight: 600;
-  font-size: 25px;
-  width: 60vw;
-  color: rgb(249, 129, 16);
+  flex: 1;
+  max-width: 50%;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s ease-in-out forwards;
 }
 
 .welcome-3 {
-  font-family: "Poppins", serif;
+  color: #ff6600;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .matter-4 {
-  font-family: "Poppins", serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 14px;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 10px;
+  line-height: 1.5;
 }
+
 
 /* ----------------portfolio------------- */
 #portfolio {
   padding: 30px 0;
   margin-top: 100px;
+  padding: 10px 10%;
 }
 
 .sub-title {
   font-family: "Poppins", serif;
+  color: #e55a00;
 }
 
 .continer {
@@ -223,7 +263,7 @@ html {
 
 .portfolio-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 40px;
   margin-top: 35px;
 }
@@ -267,14 +307,14 @@ html {
   transform: translateY(-10px);
 }
 
-/* ------------------SKILLS------------------------------ */
+
+/* ------------skills------------------- */
+
 .skillcontiner {
-  position: relative;
-  top: 20px;
   max-width: 500px;
-  width: 100%;
   background-color: #262626;
-  margin: 0 15px;
+  margin-top: 20px;
+  margin-left: 20rem;
   padding: 10px 20px;
   border-radius: 7px;
 }
@@ -338,143 +378,95 @@ html {
   width: 60%;
 }
 
-.skill-per.node-js {
-  width: 30%;
+.skill-per.react-js {
+  width: 40%;
 }
 
+.skill-per.php {
+  width: 40%;
+}
+
+.skill-per.python {
+  width: 80%;
+}
+
+
+
 .part3 {
-  padding-top: 40px;
+  margin-top: 70px;
+  padding: 10px 12%;
   display: flex;
   text-align: center;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-
 }
 
 .part3 p {
-  position: absolute;
-  display: block;
-  margin-bottom: 407px;
-  margin-top: 7px;
-  width: 60vw;
   font-family: "Poppins", serif;
-  font-size: 10px;
+  font-size: 17px;
 }
 
 .part3 p span {
   color: rgb(249, 129, 16);
   font-weight: 600;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 
-
-
-
-
-
-
-
-
+/* 
 /* -----------------contact-------------- */
+
+.btn {
+  display: inline-block;
+  padding: 8px 5px;
+  font-family: "Poppins", serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #ff6600;
+  background: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background: #ff6600;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .row {
-  display: flex;
-  gap: 50px;
   margin-top: 150px;
+  padding: 10px 15%;
+  /* border: 2px solid white; */
+  display: flex;
+  gap: 100px;
 }
 
 .contact-left {
-
-  height: 80vh;
-  margin-left: 50px;
-}
-
-.contact-left h1 {
-  color: rgb(249, 129, 16);
+  /* border: 2px solid rgb(225, 81, 81); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .contact-left p {
-  padding-top: 50px;
-  padding-top: 50px;
-  display: flex;
-  gap: 15px;
-  font-style: italic;
-  font-weight: 300;
-}
-
-.contact-left p i {
-  color: rgb(249, 129, 16);
-
-
-}
-
-.contact-left i {
   font-size: 20px;
-}
-
-.social-icons {
-  margin-top: 30px;
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons a {
-  text-decoration: none;
-  margin-right: 15px;
-  color: #ababab;
-  display: inline-block;
-  transition: transform 0.5s;
-}
-
-.social-icons a:hover {
-  color: rgb(249, 129, 16);
-  transform: translateY(-5px);
-}
-
-.contact-left .btn {
-  text-decoration: none;
-  position: absolute;
-  top: px;
-  margin-top: 40px;
-  left: 4.5rem;
-  padding: 10px;
-  border: 2px solid;
-  font-family: "Poppins", serif;
-  font-weight: 600;
-  transition: transform 0.5s;
-}
-
-.contact-left .btn:hover {
-  background-color: rgb(249, 129, 16);
-  transform: translateY(-5px);
-}
-
-form .btn {
-  text-decoration: none;
-  padding: 8px 30px 11px 30px;
-  border: 2px solid;
-  background: transparent;
-  font-family: "Poppins", serif;
-  font-weight: 600;
-  transition: transform 0.5s;
-  margin-top: 20px;
-  margin-left: 23em;
-}
-
-form .btn:hover {
-  background-color: rgb(249, 129, 16);
-  transform: translateY(-5px);
-}
-
-.contact-right form {
-  width: 100%;
-
+  margin-left: 2px;
 }
 
 form input,
 form textarea {
-  width: 90%;
+  width: 70%;
   border: 0;
   outline: none;
   background: #262626;
@@ -486,28 +478,60 @@ form textarea {
   border-radius: 6px;
 }
 
+.social-icons {
+  display: flex;
+  font-size: 25px;
+  gap: 20px;
+}
+
+#submit-btn {
+  padding: 10px 40px;
+  margin-left: 213px;
+}
+
 .copyright {
   width: 100%;
   text-align: center;
   background: #262626;
   font-weight: 300;
   margin-top: 20px;
-  padding-top: 10px;
-}
-
-#msg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-left: 20px;
-  color: #61b752;
+  padding-top: 13px;
+  padding-bottom: 19px;
 }
 
 
 
+/* Responsive */
+@media (max-width: 768px) {
 
-@media only screen and (max-width: 920px) {
+  .main-right-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-left-block,
+  .main-img {
+    max-width: 100%;
+  }
+
+  .main-img {
+    margin-top: 20px;
+  }
+
+  /* ------------responsive design for navbar for mobile------------------- */
+
+  .main-first-hero-content {
+    margin-top: 0px;
+  }
+
+  .new-prasanth-logoand-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar a::before {
+    display: none;
+  }
 
   .header {
     background: rgb(57, 57, 78);
@@ -517,14 +541,16 @@ form textarea {
     width: 100vw;
     height: 50vh;
     top: -600px;
-   transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
   }
 
 
   #bars {
     display: block;
-    font-size: 30px;
+    padding-right: 5px;
+    padding-top: 3px;
 
+    font-size: 38px;
   }
 
   .header-logo {
@@ -564,173 +590,87 @@ form textarea {
     cursor: pointer;
   }
 
-  /* ----------------new prasanth logo and bars-------------- */
-  .new-prasanth-logoand-bar {
-    background-color: rgb(57, 57, 78);
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    height: 62px;
+
+  /* ------------------for image and matter------------------- */
+
+
+  .main-left-block {
+    height: 100vh;
+    padding-top: 100px;
+    /* border: 2px solid yellow; */
+    margin: 0px;
   }
 
-  .new-prasanth-logoand-bar h1 {
-    display: block;
-    padding-left: 20px;
-    position: relative;
-    top: 20px;
-    font-weight: 600;
-    font-size: 23px;
-    font-family: "Poppins", serif;
+  .hero-intro {
+    font-size: 25px;
   }
 
-  .new-prasanth-logoand-bar #bars {
-    margin-top: 19px;
-    margin-right: 20px;
+  .hero-intro span {
+    color: #ff6600;
+    font-size: 30px;
   }
 
-}
-
-
-/* -------------this code is for mobiles------------------ */
-
-
-
-@media only screen and (max-width:720px) {
-  .resume-button {
-    background: rgb(249, 129, 16);
-    padding: 11px 11px 12px 0px;
-    border-radius: 20px;
-    border: 2px solid;
-    width: 10px;
-
-  }
-
-  .main-img {
-    display: flex;
-    margin-right: 300px;
-    margin-left: 0px;
-    position: relative;
-    left: 90px;
-    width: 230px;
-  }
-
-  .main-list-block {
-    width: auto;
-    display: block;
-    width: 100vw;
-    margin-top: 380px;
-    position: relative;
-    left: 0px;
-    text-align: center;
-  }
-
-  .intro-content-down-links {
-    display: none;
-  }
-
-  .aboutme-img-3d {
-    width: 300px;
-    display: flex;
-    position: absolute;
-    border-radius: 5%;
-    box-shadow: 0px 0px 15px 1px black;
-    top: 41rem;
-  }
-
-  .aboutme-content {
-    justify-content: left;
-    padding-block: -21px;
-    position: absolute;
-    top: 62rem;
-  }
-
-  .i-design-2 {
-    width: 90vw;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: rgb(249, 129, 16);
-  }
-
-  .continer {
-    margin-top: 417px;
-    margin-right: 20px;
-  }
-
-  .portfolio-list div:hover {
-    background: rgb(249, 129, 16);
-    transform: translateY(-10px);
-  }
-
-  .portfolio-list div {
-    transition: background 0.5s, transform 0.5s;
-  }
-
-  .continer2 {
-    position: absolute;
-    top: 120rem;
-    margin-left: 34px;
-  }
-
-  .row {
-    height: 100%;
-    margin-top: 650px;
-  }
-
-  .copyright {
-    position: absolute;
-    top: 200rem;
-    margin-top: 36rem;
-  }
-
-  .contact-right {
-    position: absolute;
-    top: 25rem;
-    left: 15px;
-    margin-top: 40rem;
-    margin-right: 20px;
-    margin-left: 0px;
-    width: 80vw;
-  }
-
-  .part3 {
-    padding-bottom: 350px;
-  }
-
-  .btn {
-    position: absolute;
-    right: 130px;
-  }
-
-  #submit-btn {
-    top: 15rem;
-  }
-
-  #downlord-resume-btn {
-    width: 174px;
-    position: absolute;
-    top: 55rem;
-    transition: background 0.5s, transform 0.5s;
-  }
-
-  #downlord-resume-btn:hover {
-    background: rgb(249, 129, 16);
-    transform: translateY(-10px);
-  }
-
-  .navbar a::before {
-    display: none;
-  }
-
-  #msg {
+  .main-right-block {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 118px;
-    padding-left: 0px;
-    padding-right: 30px;
-    color: #61b752;
-    border: 10px;
+    padding: 30px;
+  }
+
+  .part2 {
+    margin-top: 70px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .part2-aboutme,
+  .aboutme-content {
+    max-width: 100%;
+  }
+
+  .aboutme-img-3d {
+    margin-bottom: 20px;
   }
 
 
+  /* ------------------skills------------- */
+  .skillcontiner {
+    margin-left: 10px;
+  }
+
+  .part3 {
+    margin-top: 100px;
+  }
+
+  /* --------------contact------------- */
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  #submit-btn{
+    border: 2px solid #ff6600;
+    margin-left:100px;
+  }
+  form input,
+form textarea {
+  width: 96%;
+  margin: 3px 0;
+  padding: 6px;
+}
+
+  /* .contact-right {
+    width: 66vw;
+    position: relative;
+    right: 374px;
+    top: 291px;
+  }
+  #submit-btn{
+    position: relative;
+    right: 143px;
+  }
+  #mail{
+    border: 2px solid white;
+    font-size: 20px;
+    width: 69vw;
+  } */
 }
