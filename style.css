@@ -10,7 +10,6 @@
 
 body {
   background-color: rgb(57, 57, 78);
-  background-image: url('ps-background-image.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
