@@ -1,25 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  color: rgb(250, 250, 250);
+  color: #222;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 
 body {
-  background-color: rgb(57, 57, 78);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background: #fff;
+  min-height: 100vh;
   width: 100%;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #222;
 }
 
 .main-first-hero-content {
-  background-color: rgb(57, 57, 78);
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+/* Center and style all main containers */
+.main-right-block, .part2, #portfolio, .part3, #row {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(255, 145, 0, 0.08), 0 1.5px 8px 0 rgba(0,0,0,0.04);
+  padding: 40px 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .main-right-block, .part2, #portfolio, .part3, #row {
+    padding: 24px 8px;
+    margin: 24px 8px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .main-right-block, .part2, #portfolio, .part3, #row {
+    padding: 12px 2vw;
+    margin: 12px 0;
+    border-radius: 10px;
+  }
+}
+
+/* Ensure text and accent colors are consistent */
+.sub-title, .myskills, .get-a-quote, .about-me, .resume-button, .btn, .portfolio-list div:hover, .skillbox:hover {
+  color: #ff9100 !important;
+  border-color: #ff9100 !important;
+  background-color: #fff !important;
+}
+
+.portfolio-list div:hover, .skillbox:hover {
+  background: #fff7ed !important;
+  color: #ff9100 !important;
+}
+
+body, .main-left-block, .aboutme-content, .matter-4, .hero-content, .skillbox .title, .portfolio-list div h2, .portfolio-list div p {
+  color: #222 !important;
+}
+
+/* Remove any conflicting or redundant styles for containers */
+.main-right-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-left: 0;
+}
+
+@media (max-width: 900px) {
+  .main-right-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+/* Ensure images are responsive and rounded */
+.main-img, .aboutme-img-3d {
+  max-width: 100%;
   height: auto;
-  margin-top: 100px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Portfolio grid spacing */
+.portfolio-list {
+  grid-gap: 32px;
+}
+
+/* Skills grid spacing */
+.skillcontiner {
+  gap: 32px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.skillbox {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 32px 12px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(255,145,0,0.06);
+  color: #fff;
+}
+
+/* Contact section spacing */
+.row {
+  gap: 40px;
+  padding: 32px 8px;
+}
+
+/* Footer styling */
+.copyright {
+  width: 100%;
+  text-align: center;
+  background: #fff7ed;
+  color: #ff9100;
+  font-weight: 500;
+  margin-top: 20px;
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-radius: 0 0 24px 24px;
 }
 
 /* this is all about background image*/
@@ -37,7 +152,7 @@ html {
   width: 100%;
   z-index: 100;
   padding: 10px 10%;
-  background-color: rgb(57, 57, 78);
+  background-color: #ff6600;
 }
 
 #intumark,
@@ -46,6 +161,7 @@ html {
 }
 
 .header-logo {
+  color: #fff7ed;
   text-decoration: none;
   font-size: 23px;
   font-family: "Poppins", serif;
@@ -53,9 +169,10 @@ html {
 }
 
 .navbar a {
+  color: #fff7ed;
   text-decoration: none;
   font-family: 'popins', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
   font-weight: 600;
@@ -93,17 +210,6 @@ html {
   border-radius: 20px;
 }
 
-
-.main-right-block {
-  font-family: 'popins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  padding: 110px;
-  padding-left: 220px;
-}
-
 .main-left-block {
   margin-left: 90px;
   /* border: 2px solid yellow; */
@@ -122,8 +228,6 @@ html {
   transform: translateX(50px);
   animation: fadeInRight 1s ease-in-out forwards;
 }
-
-
 
 .hero-intro {
   font-size: 2rem;
@@ -194,7 +298,6 @@ html {
 
 /* ---------------about me--------------- */
 
-
 .part2 {
   font-family: "Poppins", serif;
   display: flex;
@@ -203,6 +306,8 @@ html {
   max-width: 1200px;
   margin: auto;
   padding: 50px;
+  position: relative;
+  z-index: 2;
 }
 
 .part2-aboutme {
@@ -243,12 +348,14 @@ html {
   line-height: 1.5;
 }
 
-
 /* ----------------portfolio------------- */
 #portfolio {
   padding: 30px 0;
   margin-top: 100px;
   padding: 10px 10%;
+  position: relative;
+  z-index: 2;
+  background: #fff;
 }
 
 .sub-title {
@@ -267,61 +374,157 @@ html {
   margin-top: 35px;
 }
 
+/* --- Project Card Animation --- */
 .portfolio-list div {
-  background-color: #262626;
+  /* background-image: url("IMG_9424.JPG"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  /* background: #fff; */
+  color: #222;
   padding: 40px;
   font-size: 13px;
   font-weight: 300;
   border-radius: 10px;
-  transition: background 0.5s, transform 0.5s;
+  transition: background 0.5s, transform 0.5s, color 0.5s;
+  box-shadow: 0 4px 10px rgba(229, 11, 11, 0.06);
+  cursor: pointer;
 }
 
-.portfolio-list div i {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
 
 .portfolio-list div h2 {
+  color: #222;
+  z-index: 2;
+  position: relative;
   font-size: 20px;
-  font-family: "Poppins", serif;
+  font-family: "Montserrat", serif;
+  margin-bottom: 0;
 }
 
 .portfolio-list div p {
-  font-family: "Poppins", serif;
-  font-weight: 300;
-  font-style: italic;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: none;
+  border-radius: 0;
+  z-index: auto;
+  pointer-events: auto;
   font-size: 14px;
-}
-
-.portfolio-list div a {
-  text-decoration: none;
-  font-size: 12px;
-  margin-top: 20px;
-  display: inline-block;
-  font-family: "Poppins", serif;
+  font-weight: 300;
+  box-shadow: none;
+  display: block;
 }
 
 .portfolio-list div:hover {
-  background: rgb(249, 129, 16);
+  background: #fff7ed;
+  color: #ff6600;
   transform: translateY(-10px);
 }
 
+.portfolio-list div:hover h2,
+.portfolio-list div:hover p {
+  color: #ff6600;
+}
+
+/* Style the link in the popup */
+.portfolio-list div p a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  background: rgba(255, 102, 0, 0.85);
+  padding: 6px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.portfolio-list div p a:hover {
+  background: #fff;
+  color: #ff6600;
+}
+
+/* Background image for TCT Cloud World */
+.tct-bg {
+  background: url('your-image.jpg') center/cover no-repeat;
+  position: relative;
+}
+.tct-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 102, 0, 0.45); /* orange overlay for readability */
+  z-index: 0;
+}
+.tct-bg h2, .tct-bg p {
+  position: relative;
+  z-index: 1;
+}
 
 /* ------------skills------------------- */
 
 .skillcontiner {
-  max-width: 500px;
-  background-color: #262626;
-  margin-top: 20px;
-  margin-left: 20rem;
-  padding: 10px 20px;
-  border-radius: 7px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  z-index: 2;
 }
 
-.skillcontiner .skillbox {
-  width: 100%;
-  margin: 25px 0;
+.skillbox {
+  background-color: #fff;
+  padding: 50px 30px 40px 30px;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 104%;
+  height: 132px;
+  /* Remove aspect-ratio for a wider look */
+  position: relative;
 }
+
+.skillbox:hover {
+  background: rgb(249, 129, 16);
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.skillbox:hover .title,
+.skillbox:hover .tooltip {
+  color: #262626;
+}
+
+.skillbar .skill-per {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skillbox.animated .skill-per.html { width: 90%; }
+.skillbox.animated .skill-per.css { width: 70%; }
+.skillbox.animated .skill-per.js { width: 60%; }
+.skillbox.animated .skill-per.react-js { width: 40%; }
+.skillbox.animated .skill-per.php { width: 40%; }
+.skillbox.animated .skill-per.python { width: 80%; }
 
 .skillbox .title {
   display: block;
@@ -337,15 +540,6 @@ html {
   border-radius: 6px;
   margin-top: 6px;
   background: rgba(0, 0, 0, 0.1);
-}
-
-.skillbar .skill-per {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 90%;
-  border-radius: 6px;
-  background: rgb(249, 129, 16);
 }
 
 .skill-per .tooltip {
@@ -389,7 +583,10 @@ html {
   width: 80%;
 }
 
-
+.skillbox:not(:nth-child(3n))::after,
+.skillbox.animated:not(:nth-child(3n))::after {
+  display: none;
+}
 
 .part3 {
   margin-top: 70px;
@@ -398,6 +595,8 @@ html {
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .part3 p {
@@ -410,7 +609,6 @@ html {
   font-weight: 600;
   font-size: 30px;
 }
-
 
 /* 
 /* -----------------contact-------------- */
@@ -448,6 +646,8 @@ html {
   /* border: 2px solid white; */
   display: flex;
   gap: 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-left {
@@ -488,18 +688,6 @@ form textarea {
   margin-left: 213px;
 }
 
-.copyright {
-  width: 100%;
-  text-align: center;
-  background: #262626;
-  font-weight: 300;
-  margin-top: 20px;
-  padding-top: 13px;
-  padding-bottom: 19px;
-}
-
-
-
 /* Responsive */
 @media (max-width: 768px) {
 
@@ -523,17 +711,28 @@ form textarea {
     margin-top: 0px;
   }
 
-  .new-prasanth-logoand-bar {
+  /* .new-prasanth-logoand-bar {
     display: flex;
     justify-content: space-between;
-  }
+  } */
+  .new-prasanth-logoand-bar {
+    background-color: #fff7ed;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
   .navbar a::before {
     display: none;
   }
 
   .header {
-    background: rgb(57, 57, 78);
+    background: #fff7ed;
     position: fixed;
     left: 0px;
     right: 0px;
@@ -557,11 +756,12 @@ form textarea {
     position: relative;
     margin-left: 0px;
     bottom: 130px;
-    color: rgb(252, 96, 13);
+    /* color: rgb(252, 96, 13); */
   }
 
   .navbar a {
     display: block;
+    color:black;
     padding: 8px;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -634,7 +834,7 @@ form textarea {
 
   /* ------------------skills------------- */
   .skillcontiner {
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 
   .part3 {
@@ -648,7 +848,7 @@ form textarea {
   }
   #submit-btn{
     border: 2px solid #ff6600;
-    margin-left:100px;
+    margin-left:130px;
   }
   form input,
 form textarea {
@@ -672,4 +872,71 @@ form textarea {
     font-size: 20px;
     width: 69vw;
   } */
+}
+
+@media (max-width: 1200px) {
+  .skillcontiner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .skillcontiner {
+    grid-template-columns: 1fr;
+  }
+  .skillbox {
+    height: 180px;
+    padding: 30px 10px;
+  }
+}
+ @media (max-width: 900px) {
+  .skillcontiner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 700px;
+  }
+  .skillbox {
+    width: 100%;
+    height: 120px;
+    padding: 30px 10px;
+  }
+  .skillbox:not(:nth-child(2n))::after,
+  .skillbox.animated:not(:nth-child(2n))::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0);
+    width: 4px;
+    height: 60%;
+    background: linear-gradient(180deg, #ff6600 0%, #ffb366 100%);
+    border-radius: 2px;
+    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    z-index: 1;
+  }
+  .skillbox.animated:not(:nth-child(2n))::after {
+    transform: translateY(-50%) scaleX(1);
+  }
+  .skillbox:not(:nth-child(3n))::after {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .skillcontiner {
+    /* grid-template-columns: 1fr; */
+    gap: 30px;
+    max-width: 95vw;
+  }
+  .skillbox {
+    width: 104%;
+    height: 110px;
+    padding: 20px 40px;
+  }
+  .skillbox::after {
+    display: none !important;
+  }
+}
+
+/* Description and about me text to black */
+.aboutme-content, .matter-4, .part3 p, .welcome-3, .main-left-block, .hero-content, .skillbox .title, .portfolio-list div h2, .portfolio-list div p {
+  color: #222 !important;
 }
