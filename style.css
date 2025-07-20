@@ -10,6 +10,12 @@
   font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 
+.ai {
+  color: #ff9100;
+  font-family: 'Poppins';
+  font-size: 20px;
+}
+
 body {
   background: #fff;
   min-height: 100vh;
@@ -26,12 +32,16 @@ body {
 }
 
 /* Center and style all main containers */
-.main-right-block, .part2, #portfolio, .part3, #row {
+.main-right-block,
+.part2,
+#portfolio,
+.part3,
+#row {
   max-width: 1100px;
   margin: 40px auto;
   background: #fff;
   border-radius: 24px;
-  box-shadow: 0 4px 32px 0 rgba(255, 145, 0, 0.08), 0 1.5px 8px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 4px 32px 0 rgba(255, 145, 0, 0.08), 0 1.5px 8px 0 rgba(0, 0, 0, 0.04);
   padding: 40px 32px;
   position: relative;
   z-index: 1;
@@ -39,14 +49,25 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  .main-right-block, .part2, #portfolio, .part3, #row {
+
+  .main-right-block,
+  .part2,
+  #portfolio,
+  .part3,
+  #row {
     padding: 24px 8px;
     margin: 24px 8px;
     border-radius: 16px;
   }
 }
+
 @media (max-width: 600px) {
-  .main-right-block, .part2, #portfolio, .part3, #row {
+
+  .main-right-block,
+  .part2,
+  #portfolio,
+  .part3,
+  #row {
     padding: 12px 2vw;
     margin: 12px 0;
     border-radius: 10px;
@@ -54,18 +75,33 @@ body {
 }
 
 /* Ensure text and accent colors are consistent */
-.sub-title, .myskills, .get-a-quote, .about-me, .resume-button, .btn, .portfolio-list div:hover, .skillbox:hover {
+.sub-title,
+.myskills,
+.get-a-quote,
+.about-me,
+.resume-button,
+.btn,
+.portfolio-list div:hover,
+.skillbox:hover {
   color: #ff9100 !important;
   border-color: #ff9100 !important;
   background-color: #fff !important;
 }
 
-.portfolio-list div:hover, .skillbox:hover {
+.portfolio-list div:hover,
+.skillbox:hover {
   background: #fff7ed !important;
   color: #ff9100 !important;
 }
 
-body, .main-left-block, .aboutme-content, .matter-4, .hero-content, .skillbox .title, .portfolio-list div h2, .portfolio-list div p {
+body,
+.main-left-block,
+.aboutme-content,
+.matter-4,
+.hero-content,
+.skillbox .title,
+.portfolio-list div h2,
+.portfolio-list div p {
   color: #222 !important;
 }
 
@@ -87,11 +123,12 @@ body, .main-left-block, .aboutme-content, .matter-4, .hero-content, .skillbox .t
 }
 
 /* Ensure images are responsive and rounded */
-.main-img, .aboutme-img-3d {
+.main-img,
+.aboutme-img-3d {
   max-width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* Portfolio grid spacing */
@@ -114,7 +151,7 @@ body, .main-left-block, .aboutme-content, .matter-4, .hero-content, .skillbox .t
   padding: 32px 12px;
   border-radius: 14px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(255,145,0,0.06);
+  box-shadow: 0 2px 8px rgba(255, 145, 0, 0.06);
   color: #fff;
 }
 
@@ -232,7 +269,7 @@ html {
 .hero-intro {
   font-size: 2rem;
   font-weight: bold;
-  color:#ff6600;
+  color: #ff6600;
 }
 
 .hero-intro span {
@@ -447,6 +484,7 @@ html {
   font-weight: 600;
   transition: background 0.2s, color 0.2s;
 }
+
 .portfolio-list div p a:hover {
   background: #fff;
   color: #ff6600;
@@ -457,14 +495,18 @@ html {
   background: url('your-image.jpg') center/cover no-repeat;
   position: relative;
 }
+
 .tct-bg::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 102, 0, 0.45); /* orange overlay for readability */
+  background: rgba(255, 102, 0, 0.45);
+  /* orange overlay for readability */
   z-index: 0;
 }
-.tct-bg h2, .tct-bg p {
+
+.tct-bg h2,
+.tct-bg p {
   position: relative;
   z-index: 1;
 }
@@ -506,7 +548,7 @@ html {
 .skillbox:hover {
   background: rgb(249, 129, 16);
   transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .skillbox:hover .title,
@@ -519,12 +561,29 @@ html {
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.skillbox.animated .skill-per.html { width: 90%; }
-.skillbox.animated .skill-per.css { width: 70%; }
-.skillbox.animated .skill-per.js { width: 60%; }
-.skillbox.animated .skill-per.react-js { width: 40%; }
-.skillbox.animated .skill-per.php { width: 40%; }
-.skillbox.animated .skill-per.python { width: 80%; }
+.skillbox.animated .skill-per.html {
+  width: 90%;
+}
+
+.skillbox.animated .skill-per.css {
+  width: 70%;
+}
+
+.skillbox.animated .skill-per.js {
+  width: 60%;
+}
+
+.skillbox.animated .skill-per.react-js {
+  width: 40%;
+}
+
+.skillbox.animated .skill-per.php {
+  width: 40%;
+}
+
+.skillbox.animated .skill-per.python {
+  width: 80%;
+}
 
 .skillbox .title {
   display: block;
@@ -725,7 +784,7 @@ form textarea {
     left: 0;
     width: 100%;
     z-index: 1000;
-}
+  }
 
   .navbar a::before {
     display: none;
@@ -761,7 +820,7 @@ form textarea {
 
   .navbar a {
     display: block;
-    color:black;
+    color: black;
     padding: 8px;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -804,6 +863,12 @@ form textarea {
     font-size: 25px;
   }
 
+  .ai {
+    color:#ff6600;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
   .hero-intro span {
     color: #ff6600;
     font-size: 30px;
@@ -842,20 +907,22 @@ form textarea {
   }
 
   /* --------------contact------------- */
-  .row{
+  .row {
     display: flex;
     flex-direction: column;
   }
-  #submit-btn{
+
+  #submit-btn {
     border: 2px solid #ff6600;
-    margin-left:130px;
+    margin-left: 130px;
   }
+
   form input,
-form textarea {
-  width: 96%;
-  margin: 3px 0;
-  padding: 6px;
-}
+  form textarea {
+    width: 96%;
+    margin: 3px 0;
+    padding: 6px;
+  }
 
   /* .contact-right {
     width: 66vw;
@@ -879,26 +946,31 @@ form textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 800px) {
   .skillcontiner {
     grid-template-columns: 1fr;
   }
+
   .skillbox {
     height: 180px;
     padding: 30px 10px;
   }
 }
- @media (max-width: 900px) {
+
+@media (max-width: 900px) {
   .skillcontiner {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     max-width: 700px;
   }
+
   .skillbox {
     width: 100%;
     height: 120px;
     padding: 30px 10px;
   }
+
   .skillbox:not(:nth-child(2n))::after,
   .skillbox.animated:not(:nth-child(2n))::after {
     content: '';
@@ -910,33 +982,46 @@ form textarea {
     height: 60%;
     background: linear-gradient(180deg, #ff6600 0%, #ffb366 100%);
     border-radius: 2px;
-    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
   }
+
   .skillbox.animated:not(:nth-child(2n))::after {
     transform: translateY(-50%) scaleX(1);
   }
+
   .skillbox:not(:nth-child(3n))::after {
     display: none;
   }
 }
+
 @media (max-width: 600px) {
   .skillcontiner {
     /* grid-template-columns: 1fr; */
     gap: 30px;
     max-width: 95vw;
   }
+
   .skillbox {
     width: 104%;
     height: 110px;
     padding: 20px 40px;
   }
+
   .skillbox::after {
     display: none !important;
   }
 }
 
 /* Description and about me text to black */
-.aboutme-content, .matter-4, .part3 p, .welcome-3, .main-left-block, .hero-content, .skillbox .title, .portfolio-list div h2, .portfolio-list div p {
+.aboutme-content,
+.matter-4,
+.part3 p,
+.welcome-3,
+.main-left-block,
+.hero-content,
+.skillbox .title,
+.portfolio-list div h2,
+.portfolio-list div p {
   color: #222 !important;
 }
