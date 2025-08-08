@@ -4,14 +4,14 @@
 * {
   margin: 0;
   padding: 0;
-  color: #222;
+  /* color: #222; */
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 
 .ai {
-  color: #ff9100;
+  color:#ff9100;
   font-family: 'Poppins';
   font-size: 20px;
 }
@@ -22,6 +22,34 @@ body {
   width: 100%;
   font-family: 'Montserrat', 'Poppins', sans-serif;
   color: #222;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Video Background Styles */
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+   object-fit: cover;
+  z-index: -1; 
+  opacity: 0.9;
+  min-width: 0%;
+  min-height: 150%;
+}
+
+@media (max-width: 1024px) {
+  #video-background {
+    object-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #video-background {
+    object-position: center;
+  }
 }
 
 .main-first-hero-content {
@@ -39,12 +67,15 @@ body {
 #row {
   max-width: 1100px;
   margin: 40px auto;
-  background: #fff;
+  background:transparent;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 24px;
-  box-shadow: 0 4px 32px 0 rgba(255, 145, 0, 0.08), 0 1.5px 8px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 32px 0 rgba(255, 145, 0, 0.12), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
   padding: 40px 32px;
   position: relative;
   z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive adjustments */
@@ -62,7 +93,6 @@ body {
 }
 
 @media (max-width: 600px) {
-
   .main-right-block,
   .part2,
   #portfolio,
@@ -73,10 +103,14 @@ body {
     border-radius: 10px;
   }
 }
+.sub-title{
+  background-color: none;
+}
+.skillspera{
+  color: #fff;
+}
 
 /* Ensure text and accent colors are consistent */
-.sub-title,
-.myskills,
 .get-a-quote,
 .about-me,
 .resume-button,
@@ -94,16 +128,6 @@ body {
   color: #ff9100 !important;
 }
 
-body,
-.main-left-block,
-.aboutme-content,
-.matter-4,
-.hero-content,
-.skillbox .title,
-.portfolio-list div h2,
-.portfolio-list div p {
-  color: #222 !important;
-}
 
 /* Remove any conflicting or redundant styles for containers */
 .main-right-block {
@@ -111,7 +135,8 @@ body,
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding-left: 0;
+  /* padding-left: 0; */
+  background: transparent;
 }
 
 @media (max-width: 900px) {
@@ -150,9 +175,12 @@ body,
   min-height: 0;
   padding: 32px 12px;
   border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(255, 145, 0, 0.06);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 4px 16px rgba(255, 145, 0, 0.1);
   color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Contact section spacing */
@@ -165,13 +193,16 @@ body,
 .copyright {
   width: 100%;
   text-align: center;
-  background: #fff7ed;
-  color: #ff9100;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
   font-weight: 500;
   margin-top: 20px;
   padding-top: 13px;
   padding-bottom: 19px;
   border-radius: 0 0 24px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* this is all about background image*/
@@ -189,7 +220,11 @@ html {
   width: 100%;
   z-index: 100;
   padding: 10px 10%;
-  background-color: #ff6600;
+  background: transparent;
+  /* background-color: rgba(255, 102, 0, 0.85); */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #intumark,
@@ -273,14 +308,16 @@ html {
 }
 
 .hero-intro span {
-  color: #ff6600;
+  color:#38BCEB;
   font-size: 2.5rem;
 }
 
 .hero-content {
+  /* border: 2px solid white; */
   font-size: 1.2rem;
   color: #fff;
   margin-top: 10px;
+  z-index: -1;
 }
 
 .intro-content-down-links {
@@ -345,6 +382,7 @@ html {
   padding: 50px;
   position: relative;
   z-index: 2;
+  background: transparent;
 }
 
 .part2-aboutme {
@@ -392,7 +430,7 @@ html {
   padding: 10px 10%;
   position: relative;
   z-index: 2;
-  background: #fff;
+  background: transparent;
 }
 
 .sub-title {
@@ -413,6 +451,7 @@ html {
 
 /* --- Project Card Animation --- */
 .portfolio-list div {
+  background-color: white;
   /* background-image: url("IMG_9424.JPG"); */
   background-size: cover;
   background-position: center;
@@ -488,6 +527,9 @@ html {
 .portfolio-list div p a:hover {
   background: #fff;
   color: #ff6600;
+}
+.portfolio-list div a{
+  color: black;
 }
 
 /* Background image for TCT Cloud World */
@@ -589,7 +631,7 @@ html {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: rgb(255, 255, 255);
+  color:black;
   font-family: "Poppins", serif;
 }
 
@@ -648,6 +690,7 @@ html {
 }
 
 .part3 {
+  background: transparent;
   margin-top: 70px;
   padding: 10px 12%;
   display: flex;
@@ -710,7 +753,7 @@ html {
 }
 
 .contact-left {
-  /* border: 2px solid rgb(225, 81, 81); */
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -737,10 +780,15 @@ form textarea {
 }
 
 .social-icons {
+  color: white;
   display: flex;
   font-size: 25px;
   gap: 20px;
 }
+.social-icons a{
+  color: white;
+}
+
 
 #submit-btn {
   padding: 10px 40px;
@@ -775,7 +823,9 @@ form textarea {
     justify-content: space-between;
   } */
   .new-prasanth-logoand-bar {
-    background-color: #fff7ed;
+    background-color: rgba(255, 247, 237, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 15px 15px 15px 15px;
     display: flex;
     justify-content: space-between;
@@ -784,6 +834,7 @@ form textarea {
     left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .navbar a::before {
@@ -791,7 +842,9 @@ form textarea {
   }
 
   .header {
-    background: #fff7ed;
+    background: rgba(255, 247, 237, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     position: fixed;
     left: 0px;
     right: 0px;
@@ -864,13 +917,14 @@ form textarea {
   }
 
   .ai {
-    color:#ff6600;
+    color:#ff9100;
     font-weight: 500;
     font-size: 18px;
+    
   }
 
   .hero-intro span {
-    color: #ff6600;
+    color: #38BCEB;
     font-size: 30px;
   }
 
@@ -898,9 +952,6 @@ form textarea {
 
 
   /* ------------------skills------------- */
-  .skillcontiner {
-    /* margin-left: 10px; */
-  }
 
   .part3 {
     margin-top: 100px;
@@ -1014,7 +1065,7 @@ form textarea {
 }
 
 /* Description and about me text to black */
-.aboutme-content,
+/* .aboutme-content,
 .matter-4,
 .part3 p,
 .welcome-3,
@@ -1024,4 +1075,4 @@ form textarea {
 .portfolio-list div h2,
 .portfolio-list div p {
   color: #222 !important;
-}
+} */
